@@ -15,3 +15,6 @@ code optimization
 
 ctrl+d
 
+yyleng -> find the length of matched string
+
+yy

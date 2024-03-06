@@ -7,7 +7,7 @@
 
 %%
 [A-Za-b_][A-Za-z0-9_]* {count++;printf("\n%s", yytext);};
-. {};
+. ;
 %%
 
 int yywrap( ){}
