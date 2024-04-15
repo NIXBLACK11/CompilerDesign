@@ -5,8 +5,8 @@
 %}
 
 %%
-[0-9]+\.[0-9]+ {printf("\nFloat : %s\n", yytext);}
-[0-9]+ {printf("\nInteger : %s\n", yytext);}
+-?[0-9]+\.[0-9]+ {printf("\nFloat : %s\n", yytext);}
+-?[0-9]+ {printf("\nInteger : %s\n", yytext);}
 [0-9]+\.[0-9]+[eE][+-]?[0-9]+ {printf("\nExponential : %s\n", yytext);}
 .|\n ;
 %%
