@@ -1,12 +1,12 @@
-/*Q6: Design a LEX Code to replace white spaces of ‘Input.txt’ file by a single blank character into ‘Output.txt’ file.*/
+/*Q8: Design a LEX Code to extract all html tags in the given HTML file at run time and store into Text file given at run time.*/
 
 %{
     #include<stdio.h>
 %}
 
 %%
-[\t ]+ {fprintf(yyout, " ");}
-.|\n {fprintf(yyout, "%s", yytext);}
+"<"[^<]*">" {fprintf(yyout, "%s", yytext);}
+.|\n ;
 %%
 
 int yywrap(){}
