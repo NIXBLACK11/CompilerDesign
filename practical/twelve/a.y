@@ -1,8 +1,8 @@
 %{
-    #include<stdio.h>
-    extern int val;
-    int yylex();
-    void yyerror(char *);
+  #include<stdio.h>
+  extern int val;
+  int yylex();
+  void yyerror(char *);
 %}
 
 %token digit

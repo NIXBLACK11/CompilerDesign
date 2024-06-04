@@ -1,6 +1,6 @@
 %{
 #include<stdio.h>
-extend int val;
+extern int val;
 int yylex();
 void yyerror(char*);    
 %}
@@ -19,7 +19,7 @@ T : T '*' F { $$ = $1 * $3; }
   | T '/' F { $$ = $1 / $3; }
   | F;
 
-F : digit { $$ = $1; } ;
+F : digit { $$ = val; } ;
 %%
 
 int main() {
