@@ -5,9 +5,8 @@
 %}
 
 %%
-[a-zA-z][a-zA-Z0-9_]* {printf("Identifier : %s\n", yytext);}
-[0-9]+ printf("Not an Identifier : %s\n", yytext);
-.|\n ; 
+[a-zA-Z_][a-zA-Z0-9_]* {printf("\nValid Identifier : %s\n", yytext);}
+. {printf("\nInvalid Identifier : %s\n", yytext);}
 %%
 
 int yywrap(){ }
