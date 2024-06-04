@@ -10,7 +10,6 @@
 %left '*' '/'
 
 %%
-
 S: E { printf("\n"); };
 
 E: E '+' E { printf("+ "); }
